@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Web;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace TravelTripProje.Models.Siniflar
 {
@@ -13,7 +9,8 @@ namespace TravelTripProje.Models.Siniflar
         public string UserName { get; set; }
         public string Mail { get; set; }
         public string CommentContent { get; set; }
-        public Blog Blog { get; set; }
+        public int BlogId { get; set; }
+        public virtual Blog Blog { get; set; }
 
     }
 }

@@ -1,16 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Web;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace TravelTripProje.Models.Siniflar
 {
     public class Admin
     {
-        [Key] 
+        [Key]
         public int ID { get; set; }
         public string User { get; set; }
-        public string Password  { get; set; }
+        public string Password { get; set; }
     }
 }

@@ -127,6 +127,9 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AboutController.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
+    <Compile Include="Controllers\BlogController.cs" />
     <Compile Include="Controllers\DefaultController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
@@ -135,6 +138,7 @@
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Siniflar\Admin.cs" />
     <Compile Include="Models\Siniflar\AddressBlog.cs" />
+    <Compile Include="Models\Siniflar\BlogComment.cs" />
     <Compile Include="Models\Siniflar\HomePage.cs" />
     <Compile Include="Models\Siniflar\Blog.cs" />
     <Compile Include="Models\Siniflar\Context.cs" />
@@ -154,6 +158,26 @@
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="web2\about.html" />
+    <Content Include="web2\contact.html" />
+    <Content Include="web2\css\bootstrap.css" />
+    <Content Include="web2\css\style.css" />
+    <Content Include="web2\images\avatar.png" />
+    <Content Include="web2\images\food.jpg" />
+    <Content Include="web2\images\icon3.png" />
+    <Content Include="web2\images\logo.jpg" />
+    <Content Include="web2\images\man.jpg" />
+    <Content Include="web2\images\more.png" />
+    <Content Include="web2\images\post1.jpg" />
+    <Content Include="web2\images\post2.jpg" />
+    <Content Include="web2\images\post3.jpg" />
+    <Content Include="web2\images\search.png" />
+    <Content Include="web2\index.html" />
+    <Content Include="web2\js\easing.js" />
+    <Content Include="web2\js\jquery.min.js" />
+    <Content Include="web2\js\move-top.js" />
+    <Content Include="web2\single.html" />
+    <Content Include="web2\w3layouts-License.txt" />
     <Content Include="web\about.html" />
     <Content Include="web\contact.html" />
     <Content Include="web\css\slider.css" />
@@ -219,6 +243,19 @@
     <Content Include="Views\Shared\_TestLayout.cshtml" />
     <Content Include="Views\Default\Index.cshtml" />
     <Content Include="Views\Default\About.cshtml" />
+    <Content Include="Views\About\Index.cshtml" />
+    <Content Include="Views\Blog\Index.cshtml" />
+    <Content Include="Views\Blog\BlogDetail.cshtml" />
+    <Content Include="Views\Default\Partial1.cshtml" />
+    <Content Include="Views\Default\Partial2.cshtml" />
+    <Content Include="Views\Default\Partial3.cshtml" />
+    <Content Include="Views\Default\Partial4.cshtml" />
+    <Content Include="Views\Default\Partial5.cshtml" />
+    <Content Include="Views\Shared\_AdminLayout.cshtml" />
+    <Content Include="Views\Admin\Index.cshtml" />
+    <Content Include="Views\Admin\YeniBlog.cshtml" />
+    <Content Include="Views\Admin\BlogGetir.cshtml" />
+    <Content Include="Views\Blog\YorumYap.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
