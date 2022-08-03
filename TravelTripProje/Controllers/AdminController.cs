@@ -11,6 +11,8 @@ namespace TravelTripProje.Controllers
     {
         // GET: Admin
         private Context c = new Context();
+
+        [Authorize]
         public ActionResult Index()
         {
             var values = c.Blogs.ToList();
@@ -55,5 +57,39 @@ namespace TravelTripProje.Controllers
             c.SaveChanges();
             return RedirectToAction("Index");
         }
+
+        public ActionResult YorumListesi()
+        {
+            var comments = c.Comments.ToList();
+            return View(comments);
+        }
+
+        public ActionResult YorumSil(int id)
+        {
+            var b = c.Comments.Find(id);
+            c.Comments.Remove(b);
+            c.SaveChanges();
+            return RedirectToAction("YorumListesi");
+        }
+
+        public ActionResult YorumGetir(int id)
+        {
+            var yr = c.Comments.Find(id);
+            return View("YorumGetir", yr);
+        }
+
+        public ActionResult YorumGüncelle(Comment y)
+        {
+            var yrm = c.Comments.Find(y.ID);
+            yrm.UserName = y.UserName;
+            yrm.CommentContent = y.CommentContent;
+            yrm.Mail = y.Mail;
+            c.SaveChanges();
+            return RedirectToAction("YorumListesi");
+        }
+
+
+
+
     }
 }

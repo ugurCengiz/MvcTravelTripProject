@@ -1,0 +1,27 @@
+﻿@model TravelTripProje.Models.Siniflar.Comment
+@{
+    ViewBag.Title = "YorumGetir";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>YorumGetir</h2>
+<br />
+@using (Html.BeginForm("YorumGüncelle", "Admin", FormMethod.Post))
+{
+    <label>ID</label>
+    @Html.TextBoxFor(x => x.ID, new { @class = "form-control", @readonly = "readonly" })
+    <br />
+    <label>Kullanıcı Adı</label>
+    @Html.TextBoxFor(x => x.UserName, new { @class = "form-control" })
+    <br />
+    <label>Mail</label>
+    @Html.TextBoxFor(x => x.Mail, new { @class = "form-control" })
+    <br />
+    <label>Yorum</label>
+    @Html.TextAreaFor(x => x.CommentContent,15,1, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-success">YORUM GÜNCELLE</button>
+}
+
+
+
